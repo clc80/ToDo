@@ -22,6 +22,9 @@
                                     <constraint firstAttribute="height" constant="30" id="ueZ-Ky-Plr"/>
                                     <constraint firstAttribute="width" constant="30" id="zsm-Wm-qxh"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="AddButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I30-7D-ezc"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWE-Pd-oKn">
                                 <rect key="frame" x="20" y="82" width="374" height="40"/>
@@ -98,6 +101,11 @@
                             <constraint firstItem="BWE-Pd-oKn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y03-pW-vtd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addItemTextField" destination="BWE-Pd-oKn" id="mw6-8r-SSX"/>
+                        <outlet property="prioritySegmentedControl" destination="wbl-8V-MFk" id="AxH-j9-U1o"/>
+                        <outlet property="toDoTable" destination="iRv-Y9-D9W" id="gyg-tA-13P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
