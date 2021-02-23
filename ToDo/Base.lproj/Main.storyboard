@@ -46,7 +46,7 @@
                                 <rect key="frame" x="20" y="169" width="374" height="727"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="H5t-LN-A2y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="H5t-LN-A2y" customClass="ToDoTableViewCell" customModule="ToDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5t-LN-A2y" id="0s7-YN-Hiv">
@@ -79,6 +79,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="jgp-cA-oMj" secondAttribute="trailing" constant="5" id="tj7-6h-n8Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="toDoLabel" destination="XNY-C4-82c" id="6ze-nx-9cL"/>
+                                            <outlet property="toDoPriorityColor" destination="jgp-cA-oMj" id="OZQ-Da-ncS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
