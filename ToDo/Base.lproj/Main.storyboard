@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQD-8a-lZq">
-                                <rect key="frame" x="376" y="44" width="30" height="30"/>
+                                <rect key="frame" x="364" y="44" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ueZ-Ky-Plr"/>
                                     <constraint firstAttribute="width" constant="30" id="zsm-Wm-qxh"/>
                                 </constraints>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWE-Pd-oKn">
-                                <rect key="frame" x="20" y="77" width="374" height="40"/>
+                                <rect key="frame" x="20" y="82" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JCD-hh-GFo"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-8V-MFk">
-                                <rect key="frame" x="20" y="125" width="374" height="32"/>
+                                <rect key="frame" x="20" y="130" width="374" height="32"/>
                                 <segments>
                                     <segment title="Low"/>
                                     <segment title="Medium"/>
@@ -40,7 +40,7 @@
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iRv-Y9-D9W">
-                                <rect key="frame" x="20" y="164" width="374" height="732"/>
+                                <rect key="frame" x="20" y="169" width="374" height="727"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="H5t-LN-A2y">
@@ -51,7 +51,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Grocery Shopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNY-C4-82c">
-                                                    <rect key="frame" x="8" y="13.5" width="296" height="44"/>
+                                                    <rect key="frame" x="5" y="13.5" width="319" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="MgS-ar-woH"/>
                                                     </constraints>
@@ -60,7 +60,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgp-cA-oMj">
-                                                    <rect key="frame" x="309" y="15.5" width="40" height="40"/>
+                                                    <rect key="frame" x="329" y="15.5" width="40" height="40"/>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="73f-Xz-iPa"/>
@@ -70,10 +70,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="XNY-C4-82c" firstAttribute="centerY" secondItem="0s7-YN-Hiv" secondAttribute="centerY" id="4ys-7o-H5V"/>
-                                                <constraint firstItem="XNY-C4-82c" firstAttribute="leading" secondItem="0s7-YN-Hiv" secondAttribute="leading" constant="8" id="UVV-bI-9Ku"/>
+                                                <constraint firstItem="XNY-C4-82c" firstAttribute="leading" secondItem="0s7-YN-Hiv" secondAttribute="leading" constant="5" id="UVV-bI-9Ku"/>
                                                 <constraint firstItem="jgp-cA-oMj" firstAttribute="centerY" secondItem="0s7-YN-Hiv" secondAttribute="centerY" id="eIf-Ra-tSu"/>
                                                 <constraint firstItem="jgp-cA-oMj" firstAttribute="leading" secondItem="XNY-C4-82c" secondAttribute="trailing" constant="5" id="s97-E4-xCr"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jgp-cA-oMj" secondAttribute="trailing" constant="5" id="tj7-6h-n8Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="jgp-cA-oMj" secondAttribute="trailing" constant="5" id="tj7-6h-n8Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -87,11 +87,11 @@
                             <constraint firstItem="wbl-8V-MFk" firstAttribute="top" secondItem="BWE-Pd-oKn" secondAttribute="bottom" constant="8" id="9ok-U1-iQV"/>
                             <constraint firstItem="iRv-Y9-D9W" firstAttribute="trailing" secondItem="wbl-8V-MFk" secondAttribute="trailing" id="ACU-Ae-ROK"/>
                             <constraint firstAttribute="bottom" secondItem="iRv-Y9-D9W" secondAttribute="bottom" id="EZu-s1-R6S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pQD-8a-lZq" secondAttribute="trailing" constant="8" id="H0b-mY-GAb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pQD-8a-lZq" secondAttribute="trailing" constant="20" id="H0b-mY-GAb"/>
                             <constraint firstItem="wbl-8V-MFk" firstAttribute="trailing" secondItem="BWE-Pd-oKn" secondAttribute="trailing" id="Nts-cV-CID"/>
                             <constraint firstItem="pQD-8a-lZq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ODU-ZK-03D"/>
                             <constraint firstItem="wbl-8V-MFk" firstAttribute="leading" secondItem="BWE-Pd-oKn" secondAttribute="leading" id="Yhl-Ze-sZN"/>
-                            <constraint firstItem="BWE-Pd-oKn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="myV-Go-f28"/>
+                            <constraint firstItem="BWE-Pd-oKn" firstAttribute="top" secondItem="pQD-8a-lZq" secondAttribute="bottom" constant="8" id="myV-Go-f28"/>
                             <constraint firstItem="iRv-Y9-D9W" firstAttribute="top" secondItem="wbl-8V-MFk" secondAttribute="bottom" constant="8" id="ohf-TM-z3D"/>
                             <constraint firstItem="iRv-Y9-D9W" firstAttribute="leading" secondItem="wbl-8V-MFk" secondAttribute="leading" id="p8W-Ov-bDU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWE-Pd-oKn" secondAttribute="trailing" constant="20" id="rsC-ty-wTd"/>
