@@ -14,6 +14,8 @@
 		3A4E9AC925E4DD2B00FCECCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4E9AC825E4DD2B00FCECCA /* Assets.xcassets */; };
 		3A4E9ACC25E4DD2B00FCECCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4E9ACA25E4DD2B00FCECCA /* LaunchScreen.storyboard */; };
 		3A4E9AD925E4E1F500FCECCA /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E9AD825E4E1F500FCECCA /* ToDoTableViewCell.swift */; };
+		3A65D22025EB5E45005231A5 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65D21F25EB5E45005231A5 /* ToDo.swift */; };
+		3A65D22325EB5EFA005231A5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65D22225EB5EFA005231A5 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3A4E9ACB25E4DD2B00FCECCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4E9ACD25E4DD2B00FCECCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4E9AD825E4E1F500FCECCA /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		3A65D21F25EB5E45005231A5 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		3A65D22225EB5EFA005231A5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 		3A4E9AD525E4E1AD00FCECCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A65D21F25EB5E45005231A5 /* ToDo.swift */,
+				3A65D22225EB5EFA005231A5 /* APIError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4E9AC425E4DD2A00FCECCA /* ToDoViewController.swift in Sources */,
+				3A65D22025EB5E45005231A5 /* ToDo.swift in Sources */,
 				3A4E9AC025E4DD2A00FCECCA /* AppDelegate.swift in Sources */,
 				3A4E9AC225E4DD2A00FCECCA /* SceneDelegate.swift in Sources */,
+				3A65D22325EB5EFA005231A5 /* APIError.swift in Sources */,
 				3A4E9AD925E4E1F500FCECCA /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
