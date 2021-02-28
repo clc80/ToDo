@@ -7,23 +7,51 @@
 
 import UIKit
 
-class ToDoViewController: UIViewController {
+class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var addItemTextField: UITextField!
     @IBOutlet var prioritySegmentedControl: UISegmentedControl!
     @IBOutlet var toDoTable: UITableView!
     
+    var todos = [ToDo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        NetworkService.shared.getTodos { (toDos) in
-            debugPrint(toDos)
-        }
+        
+        toDoTable.delegate = self
+        toDoTable.dataSource = self
+        
+        getTodos()
     }
 
     @IBAction func AddButtonPressed(_ sender: UIButton) {
     }
+    
+    func getTodos() {
+        NetworkService.shared.getTodos { (toDos) in
+            self.todos = toDos.items
+            self.toDoTable.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell") as? ToDoTableViewCell {
+            cell.updateCell(todo: todos[indexPath.row])
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    
     
 }
 
