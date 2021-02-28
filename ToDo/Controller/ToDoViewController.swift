@@ -17,7 +17,9 @@ class ToDoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //NetworkService.shared.getTodos()
+        NetworkService.shared.getTodos { (toDos) in
+            debugPrint(toDos)
+        }
     }
 
     @IBAction func AddButtonPressed(_ sender: UIButton) {

@@ -19,29 +19,29 @@ class NetworkService {
         let url = URL(string: "\(URL_BASE)")!
         
         let task = session.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                debugPrint(error.localizedDescription)
-                return
-            }
             
-            guard let data = data,
-                  let response = response as? HTTPURLResponse else {
-                debugPrint("Invalid data or response")
-                return
-            }
-            do {
-                if response.statusCode == 200 {
-                    let items = try JSONDecoder().decode(ToDos.self, from: data)
-                    print(items)
-                } else {
-                    let err = try JSONDecoder().decode(APIError.self, from: data)
+            DispatchQueue.main.async {
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    return
                 }
-            } catch {
-                debugPrint(error.localizedDescription)
-            }
-            
-            
-            
+                
+                guard let data = data,
+                      let response = response as? HTTPURLResponse else {
+                    debugPrint("Invalid data or response")
+                    return
+                }
+                do {
+                    if response.statusCode == 200 {
+                        let items = try JSONDecoder().decode(ToDos.self, from: data)
+                        onSucces(items)
+                    } else {
+                        let err = try JSONDecoder().decode(APIError.self, from: data)
+                    }
+                } catch {
+                    debugPrint(error.localizedDescription)
+                }
+            }  
         }
         task.resume()
     }
