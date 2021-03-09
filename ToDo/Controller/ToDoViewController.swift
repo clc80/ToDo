@@ -31,6 +31,8 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         NetworkService.shared.getTodos { (toDos) in
             self.todos = toDos.items
             self.toDoTable.reloadData()
+        } onError: { (errorMessage) in
+            debugPrint(errorMessage)
         }
     }
     
