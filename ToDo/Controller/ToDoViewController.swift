@@ -22,6 +22,15 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         toDoTable.dataSource = self
         
         getTodos()
+        
+        NetworkService.shared.addTodo(todo: ToDo(item: "Test", priority: 2)) { (todos) in
+            self.todos = todos.items
+            self.toDoTable.reloadData()
+        } onError: { (errorMessage) in
+            debugPrint(errorMessage)
+           
+        }
+
     }
 
     @IBAction func AddButtonPressed(_ sender: UIButton) {
