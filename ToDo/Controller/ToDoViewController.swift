@@ -22,18 +22,23 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         toDoTable.dataSource = self
         
         getTodos()
-        
-        NetworkService.shared.addTodo(todo: ToDo(item: "Test", priority: 2)) { (todos) in
-            self.todos = todos.items
-            self.toDoTable.reloadData()
-        } onError: { (errorMessage) in
-            debugPrint(errorMessage)
-           
-        }
-
     }
 
     @IBAction func AddButtonPressed(_ sender: UIButton) {
+        guard let todoItem = addItemTextField.text else {
+            // show error " you must enter a todo item
+            return
+        }
+        
+        let todo = ToDo(item: todoItem, priority: prioritySegmentedControl.selectedSegmentIndex)
+        NetworkService.shared.addTodo(todo: todo) { (todos) in
+            self.addItemTextField.text = ""
+            self.todos = todos.items
+            self.toDoTable.reloadData()
+        } onError: { (errorMessage) in
+           // show any errors to user on POsT
+           
+        }
     }
     
     func getTodos() {
