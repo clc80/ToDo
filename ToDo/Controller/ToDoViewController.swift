@@ -37,7 +37,6 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.toDoTable.reloadData()
         } onError: { (errorMessage) in
            // show any errors to user on POsT
-           
         }
     }
     
@@ -66,8 +65,5 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
-    
-    
 }
 

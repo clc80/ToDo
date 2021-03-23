@@ -12,7 +12,7 @@ class ToDoTableViewCell: UITableViewCell {
     @IBOutlet var toDoLabel: UILabel!
     @IBOutlet var toDoPriorityColor: UIView!
     
-    
+
     func updateCell(todo: ToDo) {
         toDoLabel.text = todo.item
         
